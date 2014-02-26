@@ -1,0 +1,17 @@
+---
+applications:
+  .:
+    name: php-workbook
+    framework:
+      name: php
+      info:
+        mem: 128M
+        description: PHP Application
+        exec: 
+    infra: ap-aws
+    url: ${name}.${target-base}
+    mem: 128M
+    instances: 1
+    services:
+      mysql-2a3e5:
+        type: mysql
